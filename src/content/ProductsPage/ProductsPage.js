@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const ProductsPage = () => {
-  return <div>Products Page</div>;
-};
+export default function ProductsPage() {
+  const [products, setProducts] = useState([]);
 
-export default ProductsPage;
+  useEffect(async () => {
+    const response = await fetch('http://localhost:3333/products');
+    const data = await response.json();
+
+    setProducts(data);
+  }, []);
+
+  return (
+    <div>
+      <div>Products Page</div>
+      <ul>
+        {products.map(prod => (<li key={prod.id}>{prod.name}</li>))}
+      </ul>
+    </div>
+  );
+}
