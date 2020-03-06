@@ -1,0 +1,15 @@
+.bx--form-item {
+  display: inline-flex;
+  flex: none;
+}
+
+.bx--select-input, .bx--number input[type='number'], .bx--date-picker__input {
+  width: unset;
+  min-width: unset;
+  max-width: 9rem;
+  margin-right: $spacing-05;
+}
+
+.page__remove-product-btn {
+  margin-left: auto;
+}

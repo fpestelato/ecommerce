@@ -1,0 +1,13 @@
+@import './override.scss';
+
+.page__product-image img {
+  max-width: 100%;
+}
+
+.cart-page___product-item {
+  padding: $spacing-03;
+}
+
+form fieldset button {
+  width: 100%;
+}

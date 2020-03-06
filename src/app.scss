@@ -1,3 +1,15 @@
+@import 'carbon-components/scss/globals/scss/vendor/@carbon/type/scss/font-family.scss';
+@import 'carbon-components/scss/globals/scss/vendor/@carbon/layout/scss/breakpoint.scss';
+@import 'carbon-components/scss/globals/scss/typography.scss';
+@import 'carbon-components/scss/globals/scss/vars.scss';
+
 @import './components/AppHeader/appheader.scss';
+@import './components/ProductChartItem/_product-cart-item.scss';
 @import './content/CartPage/_cart-page.scss';
 @import './content/ProductsPage/_products-page.scss';
+@import './content/ProductDetail/productdetail.scss';
+
+
+hr {
+  border-top: 1px solid blue;
+}

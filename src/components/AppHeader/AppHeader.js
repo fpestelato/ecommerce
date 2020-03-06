@@ -1,28 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Header,
   HeaderName,
-  HeaderNavigation,
-  HeaderMenuItem,
   HeaderGlobalBar,
   HeaderGlobalAction,
   SkipToContent,
 } from 'carbon-components-react/es/components/UIShell';
 import ShoppingCart20 from '@carbon/icons-react/lib/shopping--cart/20';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function AppHeader() {
-  const [] = useState([]);
-  const [toCart, setCart] = useState(false);
-
-  function handleRedirect() {
-    setCart(!toCart);
-  };
+  let history = useHistory();
 
   return (
     <>
-      {toCart ? <Redirect to="/cart" /> : null }
-
       <Header aria-label="Carbon Tutorial">
         <SkipToContent />
         <HeaderName element={Link} to="/" prefix="E-Commerce">
@@ -31,9 +22,10 @@ export default function AppHeader() {
         <HeaderGlobalBar>
           <HeaderGlobalAction
             aria-label="Shopping Cart"
-            onClick={()=> { handleRedirect() }}
+            onClick={()=> history.push('/cart') }
+            style={{color: 'white', display: 'inherit', width: '5rem'}}
           >
-            <ShoppingCart20 />
+            <ShoppingCart20 style={{margin: '0 0.5rem 0.5rem'}}/> <p>Cart</p>
           </HeaderGlobalAction>
         </HeaderGlobalBar>
       </Header>
