@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 export default function ProductList() {
   const { products } = useContext(ProductsContext)
 
-  return products.map(product => (
-    <div className="bx--col-md-2" key={product.id}>
-      <div className="product">
+  return <div className="bx--row">
+    { products.map(product => (
+      <div className="bx--col-md-2 product-list__item" key={product.id}>
         <img
           className="product__image"
           src={product.images[0].url}
@@ -19,6 +19,6 @@ export default function ProductList() {
           <Link to={`/product/detail/${product.id}`}>View</Link>
         </Tile>
       </div>
-    </div>
-  ));
+    ))}
+  </div>
 }

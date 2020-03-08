@@ -1,3 +1,12 @@
-.product__image, .products-page__logo{
+#products-page__logo {
   max-width: 100%;
+}
+
+.products-page__banner-logo {
+  display: flex;
+  align-items: center;
+}
+
+.products-page__product-list {
+  margin-top: 3rem;
 }

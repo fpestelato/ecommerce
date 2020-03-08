@@ -1,7 +1,18 @@
-.product__side_image {
+#products-page__logo {
   max-width: 100%;
 }
 
 .product__side_image:hover {
   cursor: pointer;
+}
+
+.products-page__banner {
+  margin-bottom: $spacing-06;
+}
+
+hr {
+  border: 1px solid blue;
+  position: absolute;
+  left: 0;
+  right: 0;
 }

@@ -50,6 +50,7 @@ export default function ProductDetail({ match, history }) {
             <ArrowLeft16/>Back
           </Button>
         </div>
+        <hr style={{border: '1px solid blue'}} />
         <div className="bx--row product-detail__main">
           <div className="bx--col-lg-2 bx--col-md-2">
             {
