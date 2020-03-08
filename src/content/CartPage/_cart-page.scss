@@ -1,3 +1,18 @@
 .cartButton {
   width: 100%;
 }
+
+.cart-page__products-list {
+  padding-top: $spacing-05;
+}
+
+.cart-page__summary {
+  margin-top: $spacing-05;
+  padding-top: $spacing-05;
+  background-color: $ui-03;
+  border: 1px solid #282828;
+}
+
+.cart-page__summary button, a {
+  margin-bottom: $spacing-05;
+}

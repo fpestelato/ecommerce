@@ -34,7 +34,7 @@ const CartPage = ({ match, history }) => {
           <div className="bx--col-lg-12 bx--col-md-12 cart-page__products-list">
             <ProductsCartItems />
           </div>
-          <div className="bx--col-lg-4 bx--col-md-4">
+          <div className="bx--col-lg-4 bx--col-md-4 cart-page__summary">
             <p>Subtotal: {cartProducts.length} items</p>
               <Form>
                 <FormGroup legendText="">
