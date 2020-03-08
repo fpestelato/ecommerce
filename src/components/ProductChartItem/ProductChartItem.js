@@ -12,7 +12,6 @@ export default function ProductChartItem() {
     light: true,
     min: 1,
     max: 100,
-    value: 0,
     step: 1,
   };
 
@@ -48,7 +47,7 @@ export default function ProductChartItem() {
     <>
       <div className="bx--row cart-page___product-item" key={product.id}>
         <div className="bx--col-lg-4 page__product-image">
-            <img src={product.images[0].url} />
+            <img src={product.image.url} />
         </div>
         <div className="bx--col-lg-12">
           <div className="bx--row">
@@ -75,7 +74,7 @@ export default function ProductChartItem() {
                 size="sm"
               />
             </Select>
-            <NumberInput {...numberInputProps} />
+            <NumberInput {...numberInputProps} value={product.quantity} />
             <DatePicker
               {...props.datePicker()}
               datePickerType="single"

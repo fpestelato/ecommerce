@@ -19,7 +19,7 @@ export default function App() {
             <Switch>
               <Route exact path="/" component={ProductsPage} />
               <Route path="/cart" component={CartPage} />
-              <Route path="/product/detail/:id" component={ProductDetail} />
+              <Route path="/product/detail/:productId" component={ProductDetail} />
             </Switch>
           </Content>
         </Provider>

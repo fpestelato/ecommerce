@@ -18,7 +18,7 @@ export default function ProductsPage() {
           </div>
         </div>
       </div>
-      <hr />
+      <hr className="divider" />
       <div className="products-page__product-list bx--col-lg-12 bx--offset-lg-2">
         <p>Merchandise products avaliable for quotation</p>
         <ProductList />

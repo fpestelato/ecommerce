@@ -8,5 +8,17 @@
 }
 
 .products-page__product-list {
-  margin-top: 3rem;
+  margin-top: $spacing-06;
+}
+
+.divider {
+  border-top: 1px solid blue;
+  position:absolute;
+  left:0;
+  right:0;
+}
+
+.products-page__banner {
+  padding-top: $spacing-02;
+  padding-bottom: $spacing-02;
 }

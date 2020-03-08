@@ -1,18 +1,21 @@
-#products-page__logo {
+@import './_override.scss';
+
+.product-detail-product__image {
+  height: 100%;
   max-width: 100%;
+}
+
+.product__side_image {
+  max-width: 100%;
+  margin-bottom: $spacing-05;
 }
 
 .product__side_image:hover {
   cursor: pointer;
 }
 
-.products-page__banner {
-  margin-bottom: $spacing-06;
-}
-
-hr {
-  border: 1px solid blue;
-  position: absolute;
-  left: 0;
-  right: 0;
+.product-detail__quotation {
+  padding-top: 0.3rem;
+  border: 1px solid #282828;
+  max-height: 17rem;
 }
