@@ -32,7 +32,7 @@ const CartPage = ({ match, history }) => {
             <p>{cartProducts.length} items</p>
           </div>
           <div className="bx--col-lg-12 bx--col-md-12 cart-page__products-list">
-            <ProductsCartItems />
+            <ProductsCartItems value={{ cartProducts, dispatch }} />
           </div>
           <div className="bx--col-lg-4 bx--col-md-4 cart-page__summary">
             <p>Subtotal: {cartProducts.length} items</p>

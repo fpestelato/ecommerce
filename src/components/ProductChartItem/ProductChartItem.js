@@ -43,10 +43,10 @@ export default function ProductChartItems() {
     }),
   };
 
-  return cartProducts.lenght > 0 ?
+  return cartProducts.length > 0 ?
     cartProducts.map(product => (
       <>
-        <div className="bx--row cart-page___product-item" key={product.id}>
+        <div className="bx--row cart-page___product-item" key={product.id + product.image.url}>
           <div className="bx--col-lg-4 page__product-image">
               <img src={product.image.url} />
           </div>
@@ -57,7 +57,7 @@ export default function ProductChartItems() {
                 className="page__remove-product-btn"
                 iconDescription="Remove product"
                 kind="ghost"
-                onClick={()=> dispatch({type: 'REMOVE_PRODUCT', id: product.id}) }
+                onClick={()=> dispatch({type: 'REMOVE_PRODUCT', cartItemKey: product.cartItemKey}) }
                 size="small"
                 tabIndex={0}
                 type="button"

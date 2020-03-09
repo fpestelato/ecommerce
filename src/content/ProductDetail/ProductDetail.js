@@ -35,7 +35,10 @@ export default function ProductDetail({ match, history }) {
     const { images, ...productProps } = product;
 
     dispatch({type: 'ADD_PRODUCT',  product: {
-      image: images[selectedImageIndex], ...productProps, quantity
+      ...productProps,
+      image: images[selectedImageIndex],
+      quantity,
+      cartItemKey: productProps.id + selectedImageIndex,
     }}, quantity);
   };
 
